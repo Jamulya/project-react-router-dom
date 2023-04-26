@@ -1,6 +1,6 @@
 span{
     padding: 10px;
-    color: aliceblue;
+    color: rgb(51, 54, 56);
     font-size: 20px;
 }
 
@@ -9,7 +9,7 @@ img{
 }
 
 .navbar{
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(169, 159, 159);
     padding: 5px;
 }
 
@@ -28,4 +28,36 @@ table, th, td{
 
 table{
     text-align: center;
+}
+
+.cart{
+    display: flex;
+    right: 30px;
+    position: absolute;
+}
+p{
+    top: -16px;
+    position: absolute;
+    left: 20px;
+}
+
+.card{
+    background-color: #cbc9bc;
+    display: inline-block;
+    padding: 25px;
+    place-items: center;
+    gap: 3px;
+    width: 35%;
+    margin: 0 auto;
+    column-gap: 25px;
+    flex-wrap: wrap;
+}
+.product{
+    display: flex;
+}
+img{
+    width: 100%;
+}
+.product__list{
+    padding-top: 70px;
 }

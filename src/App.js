@@ -8,22 +8,33 @@ import ContactPage from './components/ContactPage';
 import UsersPage from './components/UsersPage';
 import SingleUser from './components/SingleUser';
 import PageNotFound from './components/PageNotFound';
+import Card from './components/Card';
+import Checkout from './components/Checkout';
+import Products from './components/Products';
+import { CartProvider } from './components/context';
 
 function App() {
+
   return (
     <div>
-      <BrowserRouter>
-        <NavBar/>
+      <CartProvider>
+           <BrowserRouter>
+        <NavBar />
           <Routes>
-            <Route path='/' element = {<HomePage/>}/>
+            <Route path='/homepage' element = {<HomePage/>}/>
             <Route path='/about' element = {<AboutPage/>}/>
             <Route path='/contact' element = {<ContactPage/>}/>
             <Route path='/userPage' element = {<UsersPage/>}/>
             <Route path='/user/:id' element = {<SingleUser/>}/>
             <Route path='*' element = {<PageNotFound/>}/>
+            <Route path='/card' element = {<Card/>}/>
+            <Route path='/checkout' element = {<Checkout/>}/>
+            <Route path='/' element = {<Products/>}/>
 
           </Routes>
       </BrowserRouter>
+      </CartProvider>
+   
     </div>
   );
 }
